@@ -54,8 +54,8 @@ while True:
             data = input("Data to add: ")
             if data is not "":
                 if root is None:
-                    print("Created root node: " + data)
                     root = BinaryNode(data)
+                    print("Created root node: " + data)
                 else:
                     root.addItem(data)
     elif cmd == "in-order":
