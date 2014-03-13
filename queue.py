@@ -1,4 +1,4 @@
-#/usr/bin/python
+#!/usr/env/python
 
 fp = 0
 rp = 0

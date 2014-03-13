@@ -1,4 +1,4 @@
-#!/usr/env python
+#!/usr/env/python
 
 # Tic-Tac-Toe by Henry Plumb
 

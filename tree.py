@@ -1,4 +1,4 @@
-#/usr/env/python
+#!/usr/env/python
 
 class BinaryNode(object):
     def __init__(self, data):

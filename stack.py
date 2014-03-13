@@ -1,4 +1,4 @@
-#/usr/bin/python
+#!/usr/env/python
 
 sp = 0
 bp = 0
