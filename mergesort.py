@@ -21,18 +21,23 @@ def mergeSort(in1, in2):
 			out.append(item1)
 			point1 += 1
 			point2 += 2
-
-	if point1 > len(in1):
-		out += in1[-(len(in1) - point1):]
-	elif point2 > len(in2):
+	
+	if point1 == len(in1):
 		out += in2[-(len(in2) - point2):]
+	elif point2 == len(in2):
+		out += in1[-(len(in1) - point1):]
 
 	return out
 
-in1 = input("First data list: ").split(",")
-in2 = input("Second data list: ").split(",")
+#in1 = input("First data list: ").split(", ")
+#in2 = input("Second data list: ").split(", ")
+
+in1 = ['apple','pomegranite','damson','plum','banana']
+in2 = ['dog','frog','sheep','pig','leopard','lion','cheetah','steve']
 
 in1 = quickSort(in1, 0, len(in1) - 1)
 in2 = quickSort(in2, 0, len(in2) - 1)
+print(in1)
+print(in2)
 
 print(mergeSort(in1, in2))

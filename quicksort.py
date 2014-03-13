@@ -1,31 +1,29 @@
-#!/usr/bin/python
-
 def quickSort(items, first, last):
 
-	if last > first:
+    if last > first:
 
-		point = first
-		keypoint = last
+        point = first
+        keypoint = last
 
-		while not point == keypoint:
+        while not point == keypoint:
 
-			if ((point > keypoint and items[point] > items[keypoint]) 
-				or (keypoint > point and items[keypoint] > items[point])):
+            if ((point > keypoint and items[point] > items[keypoint]) 
+                or (keypoint > point and items[keypoint] > items[point])):
+                
+                item = items[point]
+                items[point] = items[keypoint]
+                items[keypoint] = item
 
-				tmpItem = items[point]
-				items[point] = items[keypoint]
-				items[keypoint] = tmpItem
+            if point > keypoint:
+                point -= 1
+            elif keypoint > point:
+                point += 1
 
-				tmpPoint = point
-				point = keypoint
-				keypoint = tmpPoint
+        items = quickSort(items, first, point - 1)
+        items = quickSort(items, point + 1, last)
 
-			if point > keypoint:
-				point -= 1
-			elif keypoint > point:
-				point += 1
+    return items[::-1]
 
-		items = quickSort(items, first, point - 1)
-		items = quickSort(items, point + 1, last)
-
-	return items[::-1]
+if __name__ == '__main__':
+    in1 = ['dog','frog','sheep','pig','leopard','lion','cheetah','steve']
+    print(quickSort(in1, 0, len(in1) - 1))
