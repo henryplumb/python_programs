@@ -27,7 +27,14 @@ def showBoard():
 	screen.addstr(0, 7, "-----------------------")
 
 def moveTiles(dir):
+	if dir == "up":
 
+	elif dir == "down":
+
+	elif dir == "left":
+
+	elif dir == "right":
+		
 
 def checkWin():
 	for item in board:
