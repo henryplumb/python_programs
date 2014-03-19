@@ -1,4 +1,6 @@
-# 2048 clone by Henry Plumb (henry@android.net)
+#!/usr/env/python
+# '2048' Python clone by Henry Plumb (henry@android.net)
+# Original can be found here: http://gabrielecirulli.github.io/2048/
 
 import curses
 import random
