@@ -36,3 +36,4 @@ with open(fn, 'r') as f:
 with open(fn, 'w') as f:
 	for line in out:
 		f.write(line)
+	f.write('\n')
